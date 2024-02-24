@@ -12,7 +12,13 @@ function App() {
       setAns(null)
     }
     else if(val == "="){
-      setAns(eval(inField))
+      if(inField != ""){
+        setAns(eval(inField))
+      }
+      else{
+        setAns('Error')
+      }
+      
     }
     else{
       setInField(prev => prev+val)
